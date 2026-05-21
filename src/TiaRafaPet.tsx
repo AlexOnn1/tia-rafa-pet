@@ -83,11 +83,24 @@ const WHATSAPP_NUMBER = "5582996092372";
 /* ─── Helpers ────────────────────────────────────────────── */
 
 const buildWhatsAppUrl = (form: FormState): string => {
-  const shift = form.shift.replace(/\s*\(.*\)/, "");
-  const msg =
-    `Olá Tia Rafa! 🐾 Me chamo *${form.tutorName}* e gostaria de agendar ` +
-    `um *${form.service}* para o meu pet *${form.petName}* (${form.breed}) ` +
-    `na data *${form.date}* no turno da *${shift}*. Podemos confirmar?`;
+  const shift = form.shift.replace(/\s*\(.*\)/, "").trim();
+  const date = form.date.split("-").reverse().join("/");
+
+  const msg = [
+    "Ola, Tia Rafa!",
+    "",
+    "Gostaria de agendar um horario:",
+    "",
+    `Tutor: ${form.tutorName}`,
+    `Pet: ${form.petName}`,
+    `Raca: ${form.breed}`,
+    `Servico: ${form.service}`,
+    `Data: ${date}`,
+    `Turno: ${shift}`,
+    "",
+    "Podemos confirmar?",
+  ].join("\n");
+
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
 };
 
