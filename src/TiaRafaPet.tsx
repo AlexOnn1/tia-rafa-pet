@@ -87,14 +87,14 @@ const buildWhatsAppUrl = (form: FormState): string => {
   const date = form.date.split("-").reverse().join("/");
 
   const msg = [
-    "Ola, Tia Rafa!",
+    "Olá!",
     "",
-    "Gostaria de agendar um horario:",
+    "Vim do site e gostaria de agendar um horário:",
     "",
     `Tutor: ${form.tutorName}`,
     `Pet: ${form.petName}`,
-    `Raca: ${form.breed}`,
-    `Servico: ${form.service}`,
+    `Raça: ${form.breed}`,
+    `Serviço: ${form.service}`,
     `Data: ${date}`,
     `Turno: ${shift}`,
     "",
