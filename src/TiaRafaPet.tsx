@@ -346,6 +346,30 @@ export default function TiaRafaPet() {
         }
         .nav-pill:hover { color: #FFD84D; }
 
+        input, select {
+        background-color: rgba(255,255,255,0.85) !important;
+        color: #555555 !important;
+        border: 2px solid #A8DADC !important;
+        padding: 12px 16px !important;
+        font-size: 0.88rem !important;
+        font-family: 'Nunito', sans-serif !important;
+        width: 100% !important;
+        outline: none !important;
+        border-radius: 16px !important;
+        transition: border 0.2s !important;
+        }
+        input:focus, select:focus {
+          border-color: #4EA8B8 !important;
+          box-shadow: 0 0 0 3px rgba(168,218,220,0.35) !important;
+        }
+        input::placeholder {
+          color: #aac8cc !important;
+        }
+        select option {
+          background: white !important;
+          c       olor: #555555 !important;
+        }
+
         .section-badge {
           display: inline-flex; align-items: center; gap: 6px;
           border-radius: 9999px; padding: 6px 16px;
